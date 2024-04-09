@@ -48,7 +48,13 @@ function showQuestion() {
 function checkAnswer(selectedOption) {
     const currentQuestion = questions[currentQuestionIndex];
     const selectedAnswer = selectedOption.textContent;
-    
+
+    //  trava a mudança de resposta
+    const optionButtons = document.querySelectorAll("#options button");
+    optionButtons.forEach(button => {
+        button.disabled = true;
+    });
+
     if (selectedAnswer === currentQuestion.correctAnswer) {
         document.getElementById("feedback").textContent = "Resposta correta!";
         score++;
@@ -58,6 +64,7 @@ function checkAnswer(selectedOption) {
 
     updateScore();
 }
+
 
 function updateScore() {
     document.getElementById("score-value").textContent = score;
@@ -74,7 +81,7 @@ function nextQuestion() {
 }
 
 function endQuiz() {
-    alert("Quiz finalizado! Sua pontuação total: " + score);
+    alert("Sua pontuação total foi: " + score);
 }
 
 showQuestion();
