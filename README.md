@@ -1,4 +1,5 @@
 Quiz Interativo
+
 Este é um projeto de um quiz interativo desenvolvido utilizando HTML, CSS e JavaScript. O objetivo deste projeto é criar um quiz simples, onde os usuários possam responder a uma série de perguntas e receber feedback imediato sobre suas respostas.
 
 Funcionalidades
