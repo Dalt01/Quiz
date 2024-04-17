@@ -65,7 +65,6 @@ function checkAnswer(selectedOption) {
     updateScore();
 }
 
-
 function updateScore() {
     document.getElementById("score-value").textContent = score;
 }
